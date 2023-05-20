@@ -1,6 +1,8 @@
 //importing the request library
 const request = require('request');
 
+//returning description if everything goes well, otherwise errors
+//We are logging everything through callbacks
 const fetchBreedDescription = function(breed, callback) {
   request(`https://api.thecatapi.com/v1/breeds/search?q=${breed}`,(error,response,body) => {
     if (error) {
